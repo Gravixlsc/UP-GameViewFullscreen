@@ -85,7 +85,14 @@ namespace Kekspace.EditorTools
 
         /// <summary>Ventana pelada, sin borde ni barra de titulo. `ShowMode.NoShadow` y
         /// `ShowPopupWithMode` son internal de UnityEditor, asi que van por reflection; si
-        /// alguna version los cambia, `ShowPopup()` deja el mismo resultado con sombra.</summary>
+        /// alguna version los cambia, `ShowPopup()` deja el mismo resultado con sombra.
+        ///
+        /// Efecto colateral verificado: la Game Bar de Windows no puede grabar esta ventana.
+        /// Graba la ventana principal de la aplicacion, no la que tiene el foco, y este popup
+        /// es una ventana `WS_POPUP` propiedad de la ventana principal del editor, sin entrada
+        /// en la barra de tareas => la Game Bar captura el editor. No es falta de foco: la
+        /// ventana si lo toma. Arreglarlo pediria reescribir estilos nativos con P/Invoke.
+        /// El detalle y como grabar esta en el README.</summary>
         private static void MostrarSinBordes(EditorWindow window)
         {
             System.Type showMode = EditorAssembly.GetType("UnityEditor.ShowMode");
