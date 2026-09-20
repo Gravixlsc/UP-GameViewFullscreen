@@ -1,0 +1,8 @@
+# Este repo es SÓLO el contenido del package: no lleva proyecto de Unity adentro,
+# así que lo único que hay que ignorar son residuos del sistema y del editor.
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vs/

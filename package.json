@@ -1,0 +1,18 @@
+{
+  "name": "com.custom.gameviewfullscreen",
+  "version": "1.0.0",
+  "displayName": "Game View Fullscreen",
+  "description": "Muestra el Game view a pantalla completa de verdad: sin barra de titulo, sin pestana y sin la toolbar del Game (Display / Scale / Stats / Gizmos). No es el maximizar de Shift+Space: abre una GameView aparte en modo popup del tamano del monitor, asi que se ve el render y nada mas. Atajo F11 para entrar y salir; Escape tambien sale.",
+  "unity": "6000.0",
+  "keywords": [
+    "editor",
+    "tool",
+    "gameview",
+    "fullscreen"
+  ],
+  "author": {
+    "name": "Custom"
+  },
+  "type": "tool",
+  "hideInEditor": false
+}
